@@ -2,19 +2,24 @@ section {
   padding: 10px;
   background-color: #eee;
   margin: 10px;
- border-radius: 10px;
- border: 1px solid #bdb9b9 ;
- background: 3c016d ;
- margin-top: 0px;
- margin-right: 2em;
- margin-left: 2em;
- margin-bottom: 10px;
- width: auto;
+  border-radius: 10px;
+  border: 1px solid #bdb9b9 ;
+  background: 3c016d ;
+  margin-top: 0px;
+  margin-right: 2em;
+  margin-left: 2em;
+  margin-bottom: 10px;
+  width: auto;
 }
 
 .counter {
   font-style: italic;
   float: right;
+
+}
+
+.exceeds-limit {
+  color: red;
 }
 
 textarea {
