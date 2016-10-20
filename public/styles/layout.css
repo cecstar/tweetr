@@ -28,6 +28,20 @@ main.container {
   padding-top: 140px;
 }
 
+/*section .new-tweet {
+  padding: 10px;
+  background-color: #eee;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid #bdb9b9 ;
+  background: 3c016d ;
+  margin-top: 0px;
+  margin-right: 2em;
+  margin-left: 2em;
+  margin-bottom: 10px;
+  width: auto;
+}*/
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

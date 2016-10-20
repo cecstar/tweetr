@@ -1,10 +1,9 @@
-section {
+section.new-tweet {
   padding: 10px;
   background-color: #eee;
   margin: 10px;
   border-radius: 10px;
   border: 1px solid #bdb9b9 ;
-  background: 3c016d ;
   margin-top: 0px;
   margin-right: 2em;
   margin-left: 2em;
@@ -15,20 +14,10 @@ section {
 .counter {
   font-style: italic;
   float: right;
-
 }
 
-.exceedsLimit {
+.exceeds-limit {
   color: red;
-}
-
-textarea {
-  width: 100%;
-  padding: 5px;
-}
-
-h2 {
-  border-bottom: 2px solid black;
 }
 
 .new-tweet h2 {
@@ -36,3 +25,11 @@ h2 {
  border-bottom: 2px solid #244751
 }
 
+h2 {
+  border-bottom: 2px solid black;
+}
+
+textarea {
+  width: 100%;
+  padding: 5px;
+}

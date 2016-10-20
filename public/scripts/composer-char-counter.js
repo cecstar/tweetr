@@ -7,9 +7,9 @@ $(document).ready(function (){
     counter.text(characterCount);
 
     if (characterCount < 0) {
-        counter.addClass("exceedsLimit");
+        counter.addClass("exceeds-limit");
     } else {
-      counter.removeClass("exceedsLimit");
+      counter.removeClass("exceeds-limit");
     }
   });
 });

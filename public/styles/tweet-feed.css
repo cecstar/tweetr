@@ -1,0 +1,53 @@
+
+.profilePic {
+  float: left;
+  padding-right: 7px;
+}
+
+.tweet .handle {
+  float: right;
+  padding-top: 2px;
+}
+
+.tweet header {
+  height: 2.5em;
+  margin: 10px;
+}
+
+.tweet footer {
+  background-color: white;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 6px;
+  border-top: 1px solid #bdb9b9;
+}
+
+#feed .name {
+  float: left;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+#feed .tweetContent {
+  background-color: white;
+  width: 100%;
+  height: 5em;
+  padding: 5px;
+}
+
+#feed .tweet {
+  background-color: #eee;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid #bdb9b9;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+
+#feed .tweet:hover {
+  visibility: visible;
+}
+
+#feed .tweet:hover {
+  border-color: black;
+}
