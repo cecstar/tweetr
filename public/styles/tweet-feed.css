@@ -9,11 +9,6 @@
   padding-top: 2px;
 }
 
-.tweet header {
-  height: 2.5em;
-  margin: 10px;
-}
-
 .tweet footer {
   background-color: white;
   border-bottom-right-radius: 10px;
@@ -21,6 +16,15 @@
   padding: 6px;
   border-top: 1px solid #bdb9b9;
 }
+.tweet header {
+  height: 2.5em;
+  margin: 10px;
+}
+
+.tweet i {
+  float: right;
+}
+
 
 #feed .name {
   float: left;
