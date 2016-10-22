@@ -8,6 +8,7 @@
 
 $(document).ready(function() {
 
+  $('.new-tweet').hide();
   function createTweetElement (tweetObject) {
     var $tweet = $("<article>").addClass("tweet");
     var $header = $("<header>");
@@ -60,8 +61,7 @@ $(document).ready(function() {
     $('#tweet-area').val("");
     $('.counter').text(140);
     loadTweets();
-
-  };
+   };
   });
 
   function loadTweets() {
