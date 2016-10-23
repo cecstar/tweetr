@@ -21,8 +21,13 @@ $(document).ready(function() {
           //update formattedDate with below code so it shows how long ago tweet created
           //var time = Math.floor((Date.now() - tweobject.created_at)/8.64e+7)
 
-
     // var $footerIcons = $("<footer>").addClass("<i>");**FIX THIS****
+
+
+            // <i class="fa fa-heart" aria-hidden="true"></i>
+            // <i class="fa fa-retweet" aria-hidden="true"></i>
+            // <i class="fa fa-flag" aria-hidden="true"></i>
+
 
     var $footer = $("<footer>").append($footerContent)
 
@@ -36,13 +41,11 @@ $(document).ready(function() {
     return $tweet;
   }
 
-  $("#compose-button").on('click', function () {
+  $(".compose").on('click', function () {
     $(".new-tweet").slideToggle();
     $("textarea").focus();
 
   });
-
-
 
   $('form[action="/tweets"]').on('submit', function(event) {
     event.preventDefault();
