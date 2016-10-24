@@ -4,14 +4,13 @@ const User    = require("../lib/user-helper")
 const express = require('express');
 const tweets  = express.Router();
 
-module.exports = function(Tweets) {
+module.exports = function(db) {
 
   tweets.get("/", function(req, res) {
-    let tweets = Tweets.getTweets((value) => {
+    let tweets = db.getTweets((value) => {
       return res.json(value);
     });
   });
-
 
   tweets.post("/", function(req, res) {
     if (!req.body.text) {
@@ -27,31 +26,10 @@ module.exports = function(Tweets) {
       },
       created_at: Date.now()
     };
-    Tweets.saveTweet(tweet);
+    db.saveTweet(tweet);
     return res.send();
   });
 
   return tweets;
 
 }
-
-
-
-
-
-
-// "use strict";
-
-// const User    = require("../lib/user-helper")
-// const express = require('express');
-// const tweets  = express.Router();
-
-// module.exports = function(db) {
-
-//   tweets.get("/", function(req, res) {
-//     let tweets = db.getTweets();
-//     // simulate delay
-//     setTimeout(() => {
-//       return res.json(tweets);
-//     }, 300);
-//   });

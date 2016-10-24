@@ -4,8 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// const tweetApi = require('tweets');
-
 $(document).ready(function() {
 
   $('.new-tweet').hide();
@@ -16,27 +14,13 @@ $(document).ready(function() {
     var $name = $("<span>").addClass("name").html(tweetObject.user.name);
     var $handle = $("<span>").addClass("handle").html(tweetObject.user.handle);
     var $tweetContent = $("<main>").addClass("tweetContent").html(tweetObject.content.text);
-    var formattedDate = new Date(1*tweetObject.created_at);
-    var $footerContent = $("<span>").addClass("footer").html(formattedDate.toUTCString());
-          //update formattedDate with below code so it shows how long ago tweet created
-          //var time = Math.floor((Date.now() - tweobject.created_at)/8.64e+7)
+    var formattedDate = new Date(tweetObject.created_at);
+    var $footerContent = $("<span>").addClass("footer").html(moment(formattedDate).fromNow());
+    var $footerIcons = $('<i class="fa fa-retweet" aria-hidden="true"></i><i class="fa fa-flag" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i>');
+    var $footer = $("<footer>").append($footerContent).append($footerIcons);
 
-    // var $footerIcons = $("<footer>").addClass("<i>");**FIX THIS****
-
-
-            // <i class="fa fa-heart" aria-hidden="true"></i>
-            // <i class="fa fa-retweet" aria-hidden="true"></i>
-            // <i class="fa fa-flag" aria-hidden="true"></i>
-
-
-    var $footer = $("<footer>").append($footerContent)
-
-    $header.append($img);
-    $header.append($name);
-    $header.append($handle);
-    $tweet.append($header);
-    $tweet.append($tweetContent);
-    $tweet.append($footer);
+    $header.append($img).append($name).append($handle);
+    $tweet.append($header).append($tweetContent).append($footer);
 
     return $tweet;
   }
@@ -44,9 +28,9 @@ $(document).ready(function() {
   $(".compose").on('click', function () {
     $(".new-tweet").slideToggle();
     $("textarea").focus();
-
   });
 
+// Tweet submission form. Counts user's character input, provides err msgs on empty submission or exceeds char limit.
   $('form[action="/tweets"]').on('submit', function(event) {
     event.preventDefault();
     var text = $("#tweet-area").val();
@@ -80,12 +64,12 @@ $(document).ready(function() {
    };
    loadTweets();
 
+// Renders tweets and prepends them to the top of feed.
   function renderTweets(array) {
     for( var i in array ) {
-    var $newTweet = createTweetElement(array[i]);
-    $("#feed").prepend($newTweet);
+      var $newTweet = createTweetElement(array[i]);
+      $("#feed").prepend($newTweet);
     }
-  }
+  };
 
 });
-

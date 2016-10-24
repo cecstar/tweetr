@@ -1,14 +1,10 @@
-section.new-tweet {
-  background-color: #eee;
-  border: 1px solid #bdb9b9 ;
-  border-radius: 10px;
-  margin: 10px;
-  margin-bottom: 10px;
-  margin-left: 2em;
-  margin-right: 2em;
-  margin-top: 0px;
-  padding: 10px;
-  width: auto;
+h2 {
+  border-bottom: 2px solid black;
+}
+
+textarea {
+  padding: 5px;
+  width: 100%;
 }
 
 .counter {
@@ -25,11 +21,15 @@ section.new-tweet {
  margin-top: 0px;
 }
 
-h2 {
-  border-bottom: 2px solid black;
-}
-
-textarea {
-  padding: 5px;
-  width: 100%;
+section.new-tweet {
+  background-color: #eee;
+  border: 1px solid #bdb9b9 ;
+  border-radius: 10px;
+  margin: 10px;
+  margin-bottom: 10px;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 0px;
+  padding: 10px;
+  width: auto;
 }

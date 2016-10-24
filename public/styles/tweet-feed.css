@@ -24,8 +24,8 @@
 .tweet i {
   float: right;
   padding-right: .5em;
+  color: #00a087;
 }
-
 
 #feed .name {
   float: left;

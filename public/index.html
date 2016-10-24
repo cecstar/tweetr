@@ -3,26 +3,24 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <!-- Font Awesome CSS icons -->
+    <script src="https://use.fontawesome.com/c2d2748afe.js"></script>
     <!-- Roboto font unique, added from googlefonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+    <!-- Cool timestamp library -->
+    <script type="text/javascript" src="/vendor/moment.js"></script>
+    <!-- External JS -->
+    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
     <!-- Nav-related CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <!-- New Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
     <!-- Tweeter Feed CSS -->
     <link rel="stylesheet" href="/styles/tweet-feed.css" type="text/css" />
-
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-    <!-- Font Awesome CSS icons -->
-    <script src="https://use.fontawesome.com/c2d2748afe.js"></script>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <!-- Character-Counter JS -->
@@ -30,7 +28,6 @@
   </head>
 
   <body>
-
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
@@ -38,10 +35,8 @@
       <span class="compose"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Compose</span>
     </nav>
 
-
     <!-- Page-specific (main) content here -->
     <main class="container">
-
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id="tweet-form" action="/tweets" method="POST">
@@ -52,30 +47,12 @@
         </form>
       </section>
       <section id="feed">
-          <footer>
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-retweet" aria-hidden="true"></i>
-            <i class="fa fa-flag" aria-hidden="true"></i>
-          </footer>
       </section>
     </main>
   </body>
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Original container template -->
 <!--         <article class="tweet">
           <header>
             <img class="profilePic" src="https://placekitten.com/45/45">
