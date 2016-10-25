@@ -51,18 +51,21 @@ $(document).ready(function() {
    };
   });
 
-  function loadTweets() {
-     var allTheTweets = $.ajax({
+  function loadTweets(loadAll) {
+     $.ajax({
         method: 'GET',
         url: '/tweets',
         data: $(this).serialize(),
         dataType: 'json'
-      });
-    allTheTweets.done(function (data) {
-      renderTweets(data);
+      }).done(function (data) {
+       if(loadAll){
+        renderTweets(data);
+      } else {
+      $('#feed').prepend(createTweetElement(data[data.length - 1]));
+      }
     });
    };
-   loadTweets();
+   loadTweets(true);
 
 // Renders tweets and prepends them to the top of feed.
   function renderTweets(array) {
