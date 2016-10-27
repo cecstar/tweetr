@@ -34,7 +34,7 @@ $(document).ready(function() {
   $('form[action="/tweets"]').on('submit', function(event) {
     event.preventDefault();
     let text = $("#tweet-area").val();
-    if ( text == "") {
+    if (text.trim.length) {
      $("#errors").text("Cat got your fingers?").fadeIn().delay(1000).fadeOut();
     } else if (text.length > 140) {
      $("#errors").text("Reel it in, Sailor.").fadeIn().delay(1000).fadeOut();
